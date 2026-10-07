@@ -1,0 +1,85 @@
+{
+  "version": "v0.4",
+  "project": {
+    "name": "The density hypothesis for σ > 3/4",
+    "description": "Lean formalization of Nζ(σ,T) ≪σ,ε T^(2(1−σ)+ε), hence A(σ) ≤ 2, for fixed 3/4 < σ < 1 and ε > 0; zeros with Re(ρ) ≥ σ and 0 < Im(ρ) ≤ T are counted with multiplicity.",
+    "authors": [
+      "Mark Lewko"
+    ],
+    "license": "AGPL-3.0",
+    "responsible_maintainers": [
+      "Mark Lewko"
+    ]
+  },
+  "classification": {
+    "arxiv": [
+      "math.NT"
+    ],
+    "msc2020": [
+      "11M26"
+    ]
+  },
+  "sources": [
+    {
+      "title": "Unpublished proof notes on large values and zeta zero density",
+      "authors": [
+        "Mark Lewko"
+      ],
+      "type": "other",
+      "relationship": "formalizes",
+      "location": "Unpublished notes supplied by the author. No public paper is cited.",
+      "note": "This formalization arose from the author’s work on large values of Dirichlet polynomials and zero-density estimates for the Riemann zeta function. The author intends to write a paper presenting the argument.",
+      "author_endorsement": "n/a"
+    }
+  ],
+  "related_formalizations": [
+    {
+      "id": "https://github.com/smccolm/Lean/tree/2ace9e7c09a69fdcd1edae1ab6deb7cb3b4df1be",
+      "relationship": "adapts",
+      "note": "McColm oscillatory integral and large-values formalization, by Scott McColm. Selected proofs are adapted from revision 2ace9e7c09a69fdcd1edae1ab6deb7cb3b4df1be under the MIT license. The source author has not been contacted; no upstream endorsement is claimed. Retained attribution and other reused proof sources are documented in third_party/NOTICE.md."
+    }
+  ],
+  "status": {
+    "scope": "For every fixed 3/4 < σ < 1 and ε > 0, Nζ(σ,T) ≪σ,ε T^(2(1−σ)+ε) for every real T ≥ 2. Here Nζ counts zeros with Re(ρ) ≥ σ and 0 < Im(ρ) ≤ T, with analytic multiplicity. Thus A(σ) ≤ 2 in the convention Nζ(σ,T) ≪σ,ε T^(A(σ)(1−σ)+ε). A proved adapter obtains this count from the underlying Lean theorem for the closed symmetric region Re(ρ) ≥ σ and |Im(ρ)| ≤ T. The positive constant C(σ, ε) is existential and chosen before T; no numerical value is supplied. The endpoint σ = 3/4 and ε = 0 are excluded.",
+    "sorry_count": 0,
+    "sorry_in_definitions": 0,
+    "axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "automation": {
+    "methods": [
+      {
+        "method": "agent",
+        "models": [],
+        "framework": "Codex",
+        "tool_setup": "Lean proof development, interface code and verification scripts.",
+        "prompting_notes": "The author supplied the mathematical argument and directed the formalization."
+      }
+    ],
+    "notes": "Codex assistance is separate from mathematical authorship and from the reused proofs credited in third_party/NOTICE.md. Exact model revisions across the development are not listed."
+  },
+  "fidelity": {
+    "divergences": "The public Solution theorem uses a closed real-part cutoff and a symmetric closed height interval, with analytic multiplicities. The separately proved positive_count_density_bound restricts to Re(ρ) ≥ σ and 0 < Im(ρ) ≤ T, giving the conventional Nζ estimate and A(σ) ≤ 2 for 3/4 < σ < 1."
+  },
+  "review": {
+    "status": "The Lean build, transitive-axiom checks and fresh kernel replay pass on Lean 4.35.0-rc2 with mathlib 065356127b1dc0016f66b7283ce0ce2c4055aa55. The proof uses only propext, Classical.choice and Quot.sound. Direct checks of the exported public theorem passed with Lean, NanoDa and con-ron. Full hosted Palomar verification has not run, and no Palomar acceptance or external peer review is claimed.",
+    "reviewers": [],
+    "notes": "Mechanical proof checks are separate from mathematical peer review and registry acceptance."
+  },
+  "alignment": {
+    "namespace": "DensityThreeQuarters",
+    "statements": [
+      {
+        "source": "The density bound in the author’s unpublished proof notes",
+        "lean": "DensityThreeQuarters.density_bound",
+        "module": "Solution",
+        "status": "proved on Lean 4.35.0-rc2 / mathlib 065356127b1dc0016f66b7283ce0ce2c4055aa55",
+        "note": "The public theorem explicitly states the symmetric zero region and multiplicity sum. The positive_count_density_bound adapter gives the conventional closed real-part and positive-height count; the exponent is 2(1−σ)+ε, or normalized A(σ) ≤ 2."
+      }
+    ]
+  },
+  "acknowledgements": "Lean and mathlib contributors; Scott McColm; PrimeNumberTheoremAnd contributors, including Robby Sneiderman; Conor Grogan and contributors; Terence Tao and IEANTN contributors. Reused source revisions, adaptations and licenses are recorded in third_party/NOTICE.md."
+}
