@@ -1,0 +1,27 @@
+module
+public import Solution
+public import DensityInterfaces.PositiveCount
+
+#check @DensityInterfaces.positive_count_density_bound
+#print axioms DensityInterfaces.positive_count_density_bound
+
+#check @DensityInterfaces.ieantn_order_eq
+#print axioms DensityInterfaces.ieantn_order_eq
+#check @DensityInterfaces.ieantn_rectangle_finite
+#print axioms DensityInterfaces.ieantn_rectangle_finite
+#check @DensityInterfaces.ieantn_count_summable
+#print axioms DensityInterfaces.ieantn_count_summable
+#check @DensityInterfaces.ieantn_count_le
+#print axioms DensityInterfaces.ieantn_count_le
+#check @DensityInterfaces.ieantn_density_bound
+#print axioms DensityInterfaces.ieantn_density_bound
+#check @DensityInterfaces.antedb_shifted_density_bound
+#print axioms DensityInterfaces.antedb_shifted_density_bound
+#check @DensityInterfaces.antedb_density_exponent_two
+#print axioms DensityInterfaces.antedb_density_exponent_two
+#check @DensityInterfaces.closed_count_density_bound
+#print axioms DensityInterfaces.closed_count_density_bound
+#check @DensityThreeQuarters.v1.challenge_density_bound
+#print axioms DensityThreeQuarters.v1.challenge_density_bound
+#check @DensityThreeQuarters.density_bound
+#print axioms DensityThreeQuarters.density_bound
