@@ -1,0 +1,8 @@
+The density hypothesis for σ > 3/4
+Original contributions: Copyright 2026 Mark Lewko
+SPDX-License-Identifier: AGPL-3.0-only
+
+Original contributions are licensed under the GNU Affero General Public License, version 3 only (AGPL-3.0-only). Imported material retains its original licenses and attribution. The planned paper and unpublished proof notes are not included in this code license.
+
+The project.license value AGPL-3.0 in formalization.yaml matches the pinned
+Palomar license detector. The original-code grant remains version 3 only.
